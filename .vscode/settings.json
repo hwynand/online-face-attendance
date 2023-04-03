@@ -1,0 +1,10 @@
+{
+  "python.formatting.provider": "none",
+  "python.linting.mypyEnabled": true,
+  "python.linting.enabled": true,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+  }
+}

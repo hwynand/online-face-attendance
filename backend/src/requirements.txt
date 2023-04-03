@@ -1,2 +1,5 @@
 fastapi[all]
 face_recognition
+sqlalchemy
+psycopg2-binary
+alembic

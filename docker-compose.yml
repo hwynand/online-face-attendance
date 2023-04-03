@@ -2,14 +2,22 @@ version: '3.7'
 
 services:
   api:
-    build: 
+    build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
       - 8001:8000
 
-  web:
-    build: 
-      context: ./frontend
-      dockerfile: Dockerfile
-      
+  db:
+    image: postgres:11-alpine
+    env_file:
+      - docker-compose.env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  # web:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+
+volumes:
+  db-data:
